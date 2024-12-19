@@ -4,7 +4,7 @@ class CreateToken extends Migration {
   @override
   Future<void> up() async {
     super.up();
-    await createTableNotExists('token', () {
+    await createTableNotExists('tokens', () {
       id();
       tinyText("name");
       bigInt("tokenable_id");
