@@ -10,7 +10,7 @@ class CreateToken extends Migration {
       bigInt("tokenable_id");
       string("token");
       timeStamp("last_used_at", nullable: true);
-      timeStamp("created_at");
+      timeStamp("created_at", nullable: true);
       timeStamp("deleted_at", nullable: true);
       index(ColumnIndex.unique, "token", ["token"]);
     });

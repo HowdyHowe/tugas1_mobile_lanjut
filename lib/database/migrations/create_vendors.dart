@@ -6,6 +6,7 @@ class CreateVendors extends Migration {
     super.up();
     await createTableNotExists('vendors', () {
       char("vend_id", length: 5);
+      primary("vend_id");
       char("vend_name", length: 50);
       text("vend_address");
       text("vend_city");

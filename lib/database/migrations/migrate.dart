@@ -23,12 +23,12 @@ void main(List<String> args) async {
 class Migrate {
   registry() async {
 		 await CreateVendors().up();
+     await CreateProducts().up();
 		 await CreateUsers().up();
 		 await CreateToken().up();
 		 await CreateCustomers().up();
 		 await CreateOrders().up();
 		 await CreateOrderItems().up();
-		 await CreateProducts().up();
 		 await CreateProductNotes().up();
 	}
 

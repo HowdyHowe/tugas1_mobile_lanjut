@@ -6,6 +6,8 @@ class CreateProducts extends Migration {
     super.up();
     await createTableNotExists('products', () {
       char("prod_id", length: 10);
+      primary("prod_id");
+      char("vend_id", length: 5);
       foreign("vend_id", "vendors", "vend_id", onDelete: "CASCADE");
       char("prod_name", length: 25);
       integer("prod_price", length: 11);

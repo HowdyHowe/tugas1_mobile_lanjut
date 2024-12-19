@@ -8,7 +8,8 @@ class CreateOrderItems extends Migration {
       integer("order_item", length: 11);
       primary("order_item");
       integer("order_num", length: 11);
-      foreign("prod_id", "product", "prod_id", onDelete: "CASCADE");
+      char("prod_id", length: 10);
+      foreign("prod_id", "products", "prod_id", onDelete: "CASCADE");
       integer("quantity", length: 11);
       integer("size", length: 11);
     });

@@ -6,6 +6,7 @@ class CreateProductNotes extends Migration {
     super.up();
     await createTableNotExists('product_notes', () {
       char("note_id", length: 5);
+      primary("note_id");
       char("prod_id", length: 10);
       date("note_date");
       text("note_text");
