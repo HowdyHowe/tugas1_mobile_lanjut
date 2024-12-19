@@ -1,0 +1,831 @@
+{
+	"info": {
+		"_postman_id": "c36a66ca-0759-422f-b46b-0da08558d9cb",
+		"name": "vania_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40404372"
+	},
+	"item": [
+		{
+			"name": "test_akun",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoie1wiaWRcIjoxLFwibmFtZVwiOlwidG9iYVwiLFwiZW1haWxcIjpcImNvbnRvaEBnbWFpbC5jb21cIixcInBhc3N3b3JkXCI6XCJNa3VPWU83U1RSNWp5UHlTQk5vT0Izd0d5SWxrcnpNOTUxSEMxcFZtMXQvcHpCRDVzL1Q3RHZvQWxLeXNHMCtSVmhNbGp2UDE5OGNuNzQvcnE4VXk1UGx0ZXc9PVwiLFwiY3JlYXRlZF9hdFwiOlwiMjAyNC0xMi0xOSAyMToyMzo0NC4wXCIsXCJ1cGRhdGVkX2F0XCI6XCIyMDI0LTEyLTE5IDIxOjIzOjQ0LjBcIixcImRlbGV0ZWRfYXRcIjpcIjAwMDAtMDAtMDAgMDA6MDA6MDBcIn0iLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWQiOjEsImlhdCI6MTczNDYxODkxNSwiZXhwIjoxNzM0NjIyNTE1fQ.XMH1dkswKkJptgagtItFt4A5lgQDo1gHM8Vm5pN-HtQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// login \r\n{\r\n    \"email\": \"contoh@gmail.com\",\r\n    \"password\": \"contoh123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/akun/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"akun",
+								"login"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// registrasi akun\r\n{\r\n    \"name\": \"toba\",\r\n    \"email\": \"contoh@gmail.com\",\r\n    \"password\": \"contoh123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/akun/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"akun",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/akun/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"akun",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/akun/refresh-token",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"akun",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "data akun",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoie1wiaWRcIjoxLFwibmFtZVwiOlwidG9iYVwiLFwiZW1haWxcIjpcImNvbnRvaEBnbWFpbC5jb21cIixcInBhc3N3b3JkXCI6XCJNa3VPWU83U1RSNWp5UHlTQk5vT0Izd0d5SWxrcnpNOTUxSEMxcFZtMXQvcHpCRDVzL1Q3RHZvQWxLeXNHMCtSVmhNbGp2UDE5OGNuNzQvcnE4VXk1UGx0ZXc9PVwiLFwiY3JlYXRlZF9hdFwiOlwiMjAyNC0xMi0xOSAyMToyMzo0NC4wXCIsXCJ1cGRhdGVkX2F0XCI6XCIyMDI0LTEyLTE5IDIxOjIzOjQ0LjBcIixcImRlbGV0ZWRfYXRcIjpcIjAwMDAtMDAtMDAgMDA6MDA6MDBcIn0iLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWQiOjEsImlhdCI6MTczNDYyMTM0MywiZXhwIjoxNzM0NjI0OTQzfQ.4cu6keM2R9Zbo9Y5JXSpgyGXzfJHCkx6yXZvU8SF388",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/akun/me",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"akun",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test_vendor",
+			"item": [
+				{
+					"name": "tambah vendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vend_name\": \"Vendor XYZ\",\n    \"vend_address\": \"Abbey Road\",\n    \"vend_kota\": \"Birmingham\",\n    \"vend_state\": \"BMH\",\n    \"vend_zip\": \"42069\",\n    \"vend_country\": \"United Kingdom\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/vendors/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list dari vendor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/vendors",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tampilkan vendor dengan id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/vendors/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update vendor dengan id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vend_name\": \"Vendor XYZ Updated\",\n    \"vend_address\": \"Jl. Ring Road Utarax\"\n    // Field lainnya yang ingin diupdate...\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/vendors/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus vendor dengan id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/vendors/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test_customer",
+			"item": [
+				{
+					"name": "tambah customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoie1wiaWRcIjoxLFwibmFtZVwiOlwiQWRpbCBQcmF3aXJkYW5pXCIsXCJlbWFpbFwiOlwicHJhd2lyZGFuaUBtYWlsLmNvbVwiLFwicGFzc3dvcmRcIjpcIjk2YVZxZDlOUFMzMGI5aWh4RDZUNjZpYXFUWXZSenVXWHZYSWRKdVNMRWZQWXFtenorZFRtQUhoeUpHaHFtRUI3bmN3eWh3TlVSeDQ0MWJwN0lBRDlva0hqQT09XCIsXCJjcmVhdGVkX2F0XCI6XCIyMDI0LTEyLTEzIDAxOjEzOjQ5LjBcIixcInVwZGF0ZWRfYXRcIjpcIjIwMjQtMTItMTMgMDE6MTM6NDkuMFwiLFwiZGVsZXRlZF9hdFwiOm51bGx9IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlkIjoxLCJpYXQiOjE3MzQwMjc0NzgsImV4cCI6MTczNDAzMTA3OH0.kfmM7NlfR7qyUjinJWIQyJ86C8F9VNlkrDAR3Qsfipg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cust_name\": \"Lorem\",\n    \"cust_address\": \"Lorem\",\n    \"cust_city\": \"Ipsum\",\n    \"cust_state\": \"Ipsum\",\n    \"cust_zip\": \"Ipsum\",\n    \"cust_country\": \"Ipsum\",\n    \"cust_telp\": \"Ipsum\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list dari customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoie1wiaWRcIjoxLFwibmFtZVwiOlwiQWRpbCBQcmF3aXJkYW5pXCIsXCJlbWFpbFwiOlwicHJhd2lyZGFuaUBtYWlsLmNvbVwiLFwicGFzc3dvcmRcIjpcIjk2YVZxZDlOUFMzMGI5aWh4RDZUNjZpYXFUWXZSenVXWHZYSWRKdVNMRWZQWXFtenorZFRtQUhoeUpHaHFtRUI3bmN3eWh3TlVSeDQ0MWJwN0lBRDlva0hqQT09XCIsXCJjcmVhdGVkX2F0XCI6XCIyMDI0LTEyLTEzIDAxOjEzOjQ5LjBcIixcInVwZGF0ZWRfYXRcIjpcIjIwMjQtMTItMTMgMDE6MTM6NDkuMFwiLFwiZGVsZXRlZF9hdFwiOm51bGx9IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlkIjoxLCJpYXQiOjE3MzQwMjc0NzgsImV4cCI6MTczNDAzMTA3OH0.kfmM7NlfR7qyUjinJWIQyJ86C8F9VNlkrDAR3Qsfipg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tampilkan customer dengan id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/customers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update customer dengan id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cust_name\":\"John Doe\",\n    \"cust_telp\":\"0877777777\"\n    // Field lainnya yang ingin diupdate...\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/customers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus customer dengan id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/customers/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test_order",
+			"item": [
+				{
+					"name": "tambah pesanan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cust_id\": 5,\n    \"order_items\" : [\n        {\n            \"prod_id\": 5,\n            \"quantity\": 2,\n            \"size\": 5\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buat detail item pesanan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"prod_id\": 7,\n    \"quantity\": 5,\n    \"size\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/orders/8/items",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"8",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list dari pesanan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tampilkan detail pesanan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/orders/8",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update item pesanan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 10,\n    \"size\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/orders/8/items/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"8",
+								"items",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus pesanan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/orders/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus item pesanan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/orders/8/items/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"orders",
+								"8",
+								"items",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tests_product",
+			"item": [
+				{
+					"name": "tambah product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vend_id\": 4,\n    \"prod_name\": \"Product 7\",\n    \"prod_price\": 20000,\n    \"prod_desc\": \"Product7 Desc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tambah catatan product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"note_text\": \"Prod5 Note 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products/5/notes",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"5",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list dari product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tampilkan product dengan id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/products/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"prod_name\": \"Product 5 Updated\",\n    \"prod_desc\": \"Product Desc Updated\"\n    // Field lainnya yang ingin diupdate...\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ubah catatan product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"note_text\": \"Prod5 Note Updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products/5/notes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"5",
+								"notes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/products/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus catatan product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/products/5/notes/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"5",
+								"notes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
