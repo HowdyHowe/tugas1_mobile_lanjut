@@ -1,11 +1,23 @@
 # Menjalankan Vania Dart
 
 - Sesuaikan nama database pada file .env
-- Lalu anda dapat menginisialisasikan vania dengan perintah `dart pub global activate vania_cli`
-- Jika semua file error maka anda harus memasukkan `flutter pub get` terlebih dahulu 
+- Lalu anda dapat menginisialisasikan vania dengan perintah ini
+  ```sh
+  dart pub global activate vania_cli
+  ```
+- Jika semua file error maka anda harus memasukkan perintah di bawah ini
+  ```sh
+  flutter pub get
+  ```
 - Selanjutnya pengguna harus menjalankan migrate database
-- Untuk menjalankan migrate pengguna dapat menuliskan `vania migrate` di terminal
-- Setelah semua persiapan selesai, maka jalankan `vania serve` untuk memulai program
+- Untuk menjalankan migrate pengguna dapat menuliskan perintah berikut di terminal
+  ```sh
+  vania migrate
+  ```
+- Setelah semua persiapan selesai, maka jalankan untuk memulai program
+  ```sh
+  vania serve
+  ```
 - Dokumentasi lebih lanjut dari vania dart dapat dilihat di bawah ini:
 
   [Documentation](https://vdart.dev)
